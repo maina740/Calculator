@@ -3,62 +3,43 @@
 <meta charset="utf-8">
 <title>Calculator</title>
   <link rel="stylesheet" href="index.css">
-  <script>
-  function calcNumbers(result){
-    form.displayResult.value=form.displayResult.value+result;
-    
-    }
-    function perc() {
-      var value = document.getElementById("output").innerHTML;
-      value = value / 100;
-      document.getElementById("output").innerHTML = value;
-}
-</script>
+  <script src="index.js" defer></script>
 </head>
- 
 <body>
-
   <div class="container">
-    <form name="form">
-    <div class="display">
-      <input type="text" placeholder="0" name="displayResult" />
-    </div>
-      <div class="buttons">
-          <div class="row">
-        <button id="button" name="clear" value="C">AC</button>
-        <input type="button" name="modulo_b" value="%" onClick="perc()">
-        <input type="button" name="AddSub" value="+/-">
-    </div>
-        <div class="row">
-        <input type="button" name="b_7" value="7" onClick="calcNumbers(b_7.value)">
-          <input type="button" name="b_8" value="8" onClick="calcNumbers(b_8.value)">
-          <input type="button" name="b_9" value="9" onClick="calcNumbers(b_9.value)">
-          <input type="button" name="add_b" value="+" onClick="calcNumbers(add_b.value)">
-        </div>
-        
-        <div class="row">
-        <input type="button" name="b_4" value="4" onClick="calcNumbers(b_4.value)">
-          <input type="button" name="b_5" value="5" onClick="calcNumbers(b_5.value)">
-          <input type="button" name="b_6" value="6" onClick="calcNumbers(b_6.value)">
-          <input type="button" name="sub_b" value="-" onClick="calcNumbers(sub_b.value)">
-        </div>
-        
-        <div class="row">
-        <input type="button" name="b_1" value="1" onClick="calcNumbers(b_1.value)">
-          <input type="button" name="b_2" value="2" onClick="calcNumbers(b_2.value)">
-          <input type="button" name="b_3" value="3" onClick="calcNumbers(b_3.value)">
-          <input type="button" name="mul_b" value="*" onClick="calcNumbers(mul_b.value)">
-        </div>
-        
-        <div class="row">
-        <input type="button" name="b_0" value="0" onClick="calcNumbers(b_0.value)">
-          <input type="button" name="pot_b" value="." onClick="calcNumbers(pot_b.value)">
-          <input type="button" name="div_b" value="/" onClick="calcNumbers(div_b.value)">
-          <input type="button" class="gray" value="=" onClick="displayResult.value=eval(displayResult.value)">
-        </div>
-      </div>
-    
-    </form>
+      <section id="Display-area">
+          <div class="currentInput"></div>
+          <div class="answerScreen">0</div>
+      </section>
+      <section class="keypad-btns">
+          <button type="button" class="fun_btn" id="clear" value="">
+              AC
+          </button>
+          <button type="button" class="fun_btn" id="erase" value="">
+            
+              Del
+          </button>
+          <button type="button" class="fun_btn" value="/">/</button>
+          <button type="button" class="fun_btn" value="%">%</button>
+          <button type="button" class="num_btn" value="7">7</button>
+          <button type="button" class="num_btn" value="8">8</button>
+          <button type="button" class="num_btn" value="9">9</button>
+          <button type="button" class="fun_btn" value="*">x</button>
+          <button type="button" class="num_btn" value="4">4</button>
+          <button type="button" class="num_btn" value="5">5</button>
+          <button type="button" class="num_btn" value="6">6</button>
+          <button type="button" class="fun_btn" value="-">-</button>
+          <button type="button" class="num_btn" value="1">1</button>
+          <button type="button" class="num_btn" value="2">2</button>
+          <button type="button" class="num_btn" value="3">3</button>
+          <button type="button" class="fun_btn" value="+">+</button>
+          <button type="button" class="num_btn" value="00">00</button>
+          <button type="button" class="num_btn" value="0">0</button>
+          <button type="button" class="num_btn" value=".">.</button>
+          <button type="button" class="fun_btn" id="evaluate" value="">
+              =
+          </button>
+      </section>
   </div>
 </body>
   
